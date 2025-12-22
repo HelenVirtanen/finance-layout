@@ -116,71 +116,81 @@
           <div class="order__workflow">
             <div class="order__step">
               <div class="circle">
-                <img src="./icons/steps/search.svg" />
+                <img src="./icons/steps/search.svg" alt="Поиск" />
               </div>
               <p>Lorem ipsum dolor sit amet</p>
             </div>
 
             <div class="order__step">
               <div class="circle">
-                <img src="./icons/steps/percent.svg" />
+                <img src="./icons/steps/percent.svg" alt="Проценты" />
               </div>
               <p>Сonsecteturadipiscing elit</p>
             </div>
 
             <div class="order__step">
               <div class="circle">
-                <img src="./icons/steps/file.svg" />
+                <img src="./icons/steps/file.svg" alt="Договор" />
               </div>
               <p>Sed do eiusmod tempor</p>
             </div>
 
             <div class="order__step">
               <div class="circle">
-                <img src="./icons/steps/message.svg" />
+                <img src="./icons/steps/message.svg" alt="Письмо" />
               </div>
               <p>Esse cillum dolore eu fugiat</p>
             </div>
 
             <div class="order__step">
               <div class="circle">
-                <img src="./icons/steps/money.svg" />
+                <img src="./icons/steps/money.svg" alt="Зачисление" />
               </div>
               <p>Excepteur sint occaecat cupidatat non proident</p>
             </div>
           </div>
+
           <form class="order__form">
             <fieldset class="form__personal-data">
-              <label for="name" class="visually-hidden">Name</label>
-              <input
-                type="text"
-                placeholder="Name"
-                class="input-text input__name"
-                id="name"
-              />
-              <label for="email" class="visually-hidden">Email</label>
+              <label for="select" class="visually-hidden"
+                >Выберите вариант:</label
+              >
+              <select id="select" name="select">
+                <option value="" disabled selected>Выберите вариант:</option>
+                <option value="1">Sed ut perspiciatis</option>
+                <option value="2">Nemo enim ipsam</option>
+                <option value="3">Et harum quidem</option>
+                <option value="4">Temporibus autem</option>
+                <option value="5">Itaque earum rerum</option>
+              </select>
+              <label for="email" class="visually-hidden">E-mail</label>
               <input
                 type="email"
-                placeholder="Email"
+                placeholder="Ваш e-mail"
                 class="input-text input__email"
                 id="email"
               />
-            </fieldset>
-            <label class="label__checkbox"
-              ><input
-                type="checkbox"
-                class="input__checkbox visually-hidden"
-                aria-label="Accept privacy policy"
-              /><span class="pseudo-checkbox"></span>I accept Privacy
-              policy</label
-            >
+              <label for="name" class="visually-hidden">Имя</label>
+              <input
+                type="text"
+                placeholder="Ваше имя"
+                class="input-text input__name"
+                id="name"
+              />
+
+              <label for="slider" class="visually-hidden">Ползунок</label>
+              <input type="range" id="slider" class="custom-range"/>
+
+              <label for="file" class="visually-hidden">Файл</label>
+              <input type="file" id="file" placeholder="Прикрепить Файл" />
             <button
               type="submit"
-              class="button button__primary"
+              class="submit-button button__primary"
               aria-label="Отправить форму заказа"
             >
               Отправить
             </button>
+          </fieldset>
           </form>
         </div>
       </section>
@@ -192,7 +202,7 @@
       <div class="container">
         <ul class="footer__contacts-list">
           <li class="footer__contacts-item">
-            <p class="copyright">© 2018 «LoremIpsum.net» Все права защищены.</p>
+            <p class="copyright">© 2018 «LOREMIPSUM.NET» Все права защищены.</p>
           </li>
           <li class="footer__contacts-item">
             <img
@@ -200,6 +210,7 @@
               aria-label="Qiwi wallet"
               width="20"
               height="20"
+              alt="Qiwi-кошелек"
             />
             <a href="#" class="contact__link">Qiwi wallet</a>
           </li>
@@ -209,6 +220,7 @@
               aria-label="Yandex Money"
               width="20"
               height="20"
+              alt="Yandex Money"
             />
             <a href="#" class="contact__link">Yandex Money</a>
           </li>
@@ -218,6 +230,7 @@
               aria-label="Web Money"
               width="20"
               height="20"
+              alt="Web Money"
             />
             <a href="#" class="contact__link">Web Money</a>
           </li>
@@ -227,6 +240,7 @@
               aria-label="Почта"
               width="20"
               height="20"
+              alt="Email"
             />
             <a href="#" class="contact__link">info@ipsum228.com</a>
           </li>
@@ -236,6 +250,7 @@
               aria-label="Вконтакте"
               width="20"
               height="20"
+              alt="Вконтакте"
             />
             <a href="#" class="contact__link">Мы вконтакте</a>
           </li>
