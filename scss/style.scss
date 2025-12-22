@@ -368,7 +368,7 @@ ul {
   width: 100%;
   max-width: 370px;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .file-label:hover {
@@ -383,7 +383,7 @@ ul {
   width: 18px;
   height: 18px;
   display: inline-block;
-  transition: filter 0.2s ease;
+  transition: filter 0.3s ease;
 }
 
 .file-label:hover .file-icon {
@@ -419,5 +419,14 @@ ul {
     background-color: variables.$gray-lighter;
     margin-left: 38px;
     vertical-align: middle;
+  }
+
+  .contact__link {
+    transition: color 0.2s linear;
+
+      &:hover,
+      &:active {
+        color: variables.$accent-color;
+      }
   }
 }

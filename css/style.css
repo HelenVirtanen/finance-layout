@@ -315,7 +315,7 @@ ul {
   width: 100%;
   max-width: 370px;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 .order-inner .file-label:hover {
   border-color: rgb(255, 255, 255);
@@ -327,7 +327,7 @@ ul {
   width: 18px;
   height: 18px;
   display: inline-block;
-  transition: filter 0.2s ease;
+  transition: filter 0.3s ease;
 }
 .order-inner .file-label:hover .file-icon {
   filter: brightness(0) invert(1);
@@ -360,6 +360,12 @@ ul {
   background-color: rgb(196, 196, 196);
   margin-left: 38px;
   vertical-align: middle;
+}
+.footer__contacts-item .contact__link {
+  transition: color 0.2s linear;
+}
+.footer__contacts-item .contact__link:hover, .footer__contacts-item .contact__link:active {
+  color: rgb(67, 171, 240);
 }
 
 /*# sourceMappingURL=style.css.map */
