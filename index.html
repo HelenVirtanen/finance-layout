@@ -169,6 +169,7 @@
                 placeholder="Ваш e-mail"
                 class="input-text input__email"
                 id="email"
+                name="email"
               />
               <label for="name" class="visually-hidden">Имя</label>
               <input
@@ -176,6 +177,7 @@
                 placeholder="Ваше имя"
                 class="input-text input__name"
                 id="name"
+                name="name"
               />
 
               <div class="form__range-wrapper">
@@ -193,17 +195,18 @@
                   min="0"
                   max="100"
                   value="75"
+                  name="range"
                 />
               </div>
 
               <div class="file-wrapper">
-                <input type="file" id="file" class="file-input visually-hidden" />
+                <input type="file" id="file" class="file-input visually-hidden" name="file"/>
                 <label for="file" class="file-label">
                   <img src="./icons/form/file.svg" alt="Добавить файл" class="file-icon" />
                   Прикрепить файл
                 </label>
               </div>
-              
+
               <button
                 type="submit"
                 class="button submit-button button__primary"
@@ -233,7 +236,7 @@
               height="20"
               alt="Qiwi-кошелек"
             />
-            <a href="#" class="contact__link">Qiwi wallet</a>
+            <p class="payment-platform">Qiwi wallet</p>
           </li>
           <li class="footer__contacts-item">
             <img
@@ -243,7 +246,7 @@
               height="20"
               alt="Yandex Money"
             />
-            <a href="#" class="contact__link">Yandex Money</a>
+            <p class="payment-platform">Yandex Money</p>
           </li>
           <li class="footer__contacts-item">
             <img
@@ -253,7 +256,7 @@
               height="20"
               alt="Web Money"
             />
-            <a href="#" class="contact__link">Web Money</a>
+            <p class="payment-platform">Web Money</p>
           </li>
           <li class="footer__contacts-item">
             <img
