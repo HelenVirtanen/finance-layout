@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoremIpsum.Net</title>
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header" aria-label="Хедер">
+      <div class="container header-inner">
+        <a class="logo" href="/" aria-label="Главная"
+          >LoremIpsum.<span class="accent">Net</span></a
+        >
+        <nav class="menu" id="menu" role="menu">
+          <ul class="menu__list menu__list_header">
+            <li class="menu__list-item">
+              <a
+                href="#business"
+                class="menu__link"
+                aria-label="Переход в секцию Бизнес"
+                >Бизнес</a
+              >
+            </li>
+            <li class="menu__list-item">
+              <a
+                href="#about"
+                class="menu__link"
+                aria-label="Переход в секцию О нас"
+                >О нас</a
+              >
+            </li>
+            <li class="menu__list-item">
+              <a
+                href="#price"
+                class="menu__link"
+                aria-label="Переход в секцию Цены"
+                >Цены</a
+              >
+            </li>
+            <li class="menu__list-item">
+              <a
+                href="#order"
+                class="menu__link"
+                aria-label="Переход в секцию Оформить заказ"
+                >Оформить заказ</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="nav-toggle"
+          id="nav_toggle"
+          type="button"
+          aria-label="Burger menu"
+        >
+          <span class="nav-toggle__item">Меню</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="about">
+        <div class="container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              <span class="accent">Lorem ipsum</span> dolor sit amet consectetur
+              <span class="accent">adipiscing</span>
+            </h1>
+            <div class="hero__description">
+              <p class="hero__description-intro">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+              <ul class="hero-list">
+                <li class="hero-list__item">Totam rem aperiam eaque ipsa
+                </li>
+                <li class="hero-list__item">Sit voluptatem accusantium doloremque laudantium
+                </li>
+                <li class="hero-list__item">Sed ut perspiciatis, unde omnis iste natus error
+                </li>
+              </ul>
+            </div>
+            <div class="hero__buttons">
+              <button class="hero__button button__primary" aria-label="Заказать">
+                Заказать
+              </button>
+              <button class="hero__button button__secondary" aria-label="Подробнее">
+                Подробнее
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ./hero -->
+
+      <!-- Order -->
+      <section class="container order" id="order">
+        <div class="order__title">
+          <h2>Оформление Заказа</h2>
+          <p>Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+        </div>
+        <div class="order__workflow">
+          <div class="order__step">
+            <div class="circle">
+              <img src="./icons/steps/search.svg" />
+            </div>
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+
+          <div class="order__step">
+            <div class="circle">
+              <img src="./icons/steps/percent.svg" />
+            </div>
+            <p>Сonsecteturadipiscing elit</p>
+          </div>
+
+          <div class="order__step">
+            <div class="circle">
+              <img src="./icons/steps/file.svg" />
+            </div>
+            <p>Sed do eiusmod tempor</p>
+          </div>
+
+          <div class="order__step">
+            <div class="circle">
+              <img src="./icons/steps/message.svg" />
+            </div>
+            <p>Esse cillum dolore eu fugiat</p>
+          </div>
+
+          <div class="order__step">
+            <div class="circle">
+              <img src="./icons/steps/money.svg" />
+            </div>
+            <p>Excepteur sint occaecat cupidatat non proident</p>
+          </div>
+        </div>
+        <form class="order__form">
+          <fieldset class="form__personal-data">
+            <label for="name" class="visually-hidden">Name</label>
+            <input
+              type="text"
+              placeholder="Name"
+              class="input-text input__name"
+              id="name"
+            />
+            <label for="email" class="visually-hidden">Email</label>
+            <input
+              type="email"
+              placeholder="Email"
+              class="input-text input__email"
+              id="email"
+            />
+          </fieldset>
+          <label class="label__checkbox"
+            ><input
+              type="checkbox"
+              class="input__checkbox visually-hidden"
+              aria-label="Accept privacy policy"
+            /><span class="pseudo-checkbox"></span>I accept Privacy
+            policy</label
+          >
+          <button
+            type="submit"
+            class="button button__primary"
+            aria-label="Отправить форму заказа"
+          >
+            Отправить
+          </button>
+        </form>
+      </section>
+      <!-- /.order -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" aria-label="Футер">
+      <div class="container">
+        <ul class="footer__contacts-list">
+          <li class="footer__contacts-item">
+            <p class="copyright">© 2018 «LoremIpsum.net» Все права защищены.</p>
+          </li>
+          <li class="footer__contacts-item">
+            <img
+              src="./icons/contacts/qiwi.svg"
+              aria-label="Qiwi wallet"
+              width="20"
+              height="20"
+            />
+            <a href="#" class="contact__link">Qiwi wallet</a>
+          </li>
+          <li class="footer__contacts-item">
+            <img
+              src="./icons/contacts/yandex-money.svg"
+              aria-label="Yandex Money"
+              width="20"
+              height="20"
+            />
+            <a href="#" class="contact__link">Yandex Money</a>
+          </li>
+          <li class="footer__contacts-item">
+            <img
+              src="./icons/contacts/web-money.svg"
+              aria-label="Web Money"
+              width="20"
+              height="20"
+            />
+            <a href="#" class="contact__link">Web Money</a>
+          </li>
+          <li class="footer__contacts-item">
+            <img
+              src="./icons/contacts/email.svg"
+              aria-label="Почта"
+              width="20"
+              height="20"
+            />
+            <a href="#" class="contact__link">info@ipsum228.com</a>
+          </li>
+          <li class="footer__contacts-item">
+            <img
+              src="./icons/contacts/vk.svg"
+              aria-label="Вконтакте"
+              width="20"
+              height="20"
+            />
+            <a href="#" class="contact__link">Мы вконтакте</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- <script src="./js/script.js"></script> -->
+  </body>
+</html>
