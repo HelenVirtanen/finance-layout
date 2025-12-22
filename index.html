@@ -85,13 +85,13 @@
             </div>
             <div class="hero__buttons">
               <button
-                class="hero__button button__primary"
+                class="button hero__button button__primary"
                 aria-label="Заказать"
               >
                 Заказать
               </button>
               <button
-                class="hero__button button__secondary"
+                class="button hero__button button__secondary"
                 aria-label="Подробнее"
               >
                 Подробнее
@@ -178,19 +178,47 @@
                 id="name"
               />
 
-              <label for="slider" class="visually-hidden">Ползунок</label>
-              <input type="range" id="slider" class="custom-range"/>
+              <div class="form__range-wrapper">
+                <label for="slider" class="visually-hidden">Ползунок</label>
+                <div class="range-description">
+                  <span class="range-label"
+                    >Sed ut perspiciatis, unde omnis iste natus</span
+                  >
+                  <span class="range-value">75%</span>
+                </div>
+                <input
+                  type="range"
+                  id="slider"
+                  class="custom-range"
+                  min="0"
+                  max="100"
+                  value="75"
+                />
+              </div>
 
-              <label for="file" class="visually-hidden">Файл</label>
-              <input type="file" id="file" placeholder="Прикрепить Файл" />
-            <button
-              type="submit"
-              class="submit-button button__primary"
-              aria-label="Отправить форму заказа"
-            >
-              Отправить
-            </button>
-          </fieldset>
+              <div class="file-wrapper">
+                <input type="file" id="file" class="file-input visually-hidden" />
+                <label for="file" class="file-label">
+                  <img src="./icons/form/file.svg" alt="Добавить файл" class="file-icon" />
+                  Прикрепить файл
+                </label>
+              </div>
+
+              <!-- <label for="file" class="visually-hidden">Файл</label>
+              <input
+                type="file"
+                id="file"
+                placeholder="Прикрепить Файл"
+                class="custom-file"
+              /> -->
+              <button
+                type="submit"
+                class="button submit-button button__primary"
+                aria-label="Отправить форму заказа"
+              >
+                Отправить
+              </button>
+            </fieldset>
           </form>
         </div>
       </section>
@@ -257,6 +285,6 @@
         </ul>
       </div>
     </footer>
-    <!-- <script src="./js/script.js"></script> -->
+    <script src="./script.js"></script>
   </body>
 </html>
