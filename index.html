@@ -70,21 +70,30 @@
               <span class="accent">adipiscing</span>
             </h1>
             <div class="hero__description">
-              <p class="hero__description-intro">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+              <p class="hero__description-intro">
+                At vero eos et accusamus et iusto odio dignissimos ducimus!
+              </p>
               <ul class="hero-list">
-                <li class="hero-list__item">Totam rem aperiam eaque ipsa
+                <li class="hero-list__item">Totam rem aperiam eaque ipsa</li>
+                <li class="hero-list__item">
+                  Sit voluptatem accusantium doloremque laudantium
                 </li>
-                <li class="hero-list__item">Sit voluptatem accusantium doloremque laudantium
-                </li>
-                <li class="hero-list__item">Sed ut perspiciatis, unde omnis iste natus error
+                <li class="hero-list__item">
+                  Sed ut perspiciatis, unde omnis iste natus error
                 </li>
               </ul>
             </div>
             <div class="hero__buttons">
-              <button class="hero__button button__primary" aria-label="Заказать">
+              <button
+                class="hero__button button__primary"
+                aria-label="Заказать"
+              >
                 Заказать
               </button>
-              <button class="hero__button button__secondary" aria-label="Подробнее">
+              <button
+                class="hero__button button__secondary"
+                aria-label="Подробнее"
+              >
                 Подробнее
               </button>
             </div>
@@ -94,80 +103,86 @@
       <!-- ./hero -->
 
       <!-- Order -->
-      <section class="container order" id="order">
-        <div class="order__title">
-          <h2>Оформление Заказа</h2>
-          <p>Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+      <section class="order" id="order">
+        <div class="container order-inner">
+          <div class="order__title">
+            <h2 class="order__heading">
+              Оформление <span class="accent">заказа</span>
+            </h2>
+            <p class="order__accent">
+              Перед заполнением формы ознакомьтесь с нашей схемой работы!
+            </p>
+          </div>
+          <div class="order__workflow">
+            <div class="order__step">
+              <div class="circle">
+                <img src="./icons/steps/search.svg" />
+              </div>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+
+            <div class="order__step">
+              <div class="circle">
+                <img src="./icons/steps/percent.svg" />
+              </div>
+              <p>Сonsecteturadipiscing elit</p>
+            </div>
+
+            <div class="order__step">
+              <div class="circle">
+                <img src="./icons/steps/file.svg" />
+              </div>
+              <p>Sed do eiusmod tempor</p>
+            </div>
+
+            <div class="order__step">
+              <div class="circle">
+                <img src="./icons/steps/message.svg" />
+              </div>
+              <p>Esse cillum dolore eu fugiat</p>
+            </div>
+
+            <div class="order__step">
+              <div class="circle">
+                <img src="./icons/steps/money.svg" />
+              </div>
+              <p>Excepteur sint occaecat cupidatat non proident</p>
+            </div>
+          </div>
+          <form class="order__form">
+            <fieldset class="form__personal-data">
+              <label for="name" class="visually-hidden">Name</label>
+              <input
+                type="text"
+                placeholder="Name"
+                class="input-text input__name"
+                id="name"
+              />
+              <label for="email" class="visually-hidden">Email</label>
+              <input
+                type="email"
+                placeholder="Email"
+                class="input-text input__email"
+                id="email"
+              />
+            </fieldset>
+            <label class="label__checkbox"
+              ><input
+                type="checkbox"
+                class="input__checkbox visually-hidden"
+                aria-label="Accept privacy policy"
+              /><span class="pseudo-checkbox"></span>I accept Privacy
+              policy</label
+            >
+            <button
+              type="submit"
+              class="button button__primary"
+              aria-label="Отправить форму заказа"
+            >
+              Отправить
+            </button>
+          </form>
         </div>
-        <div class="order__workflow">
-          <div class="order__step">
-            <div class="circle">
-              <img src="./icons/steps/search.svg" />
-            </div>
-            <p>Lorem ipsum dolor sit amet</p>
-          </div>
-
-          <div class="order__step">
-            <div class="circle">
-              <img src="./icons/steps/percent.svg" />
-            </div>
-            <p>Сonsecteturadipiscing elit</p>
-          </div>
-
-          <div class="order__step">
-            <div class="circle">
-              <img src="./icons/steps/file.svg" />
-            </div>
-            <p>Sed do eiusmod tempor</p>
-          </div>
-
-          <div class="order__step">
-            <div class="circle">
-              <img src="./icons/steps/message.svg" />
-            </div>
-            <p>Esse cillum dolore eu fugiat</p>
-          </div>
-
-          <div class="order__step">
-            <div class="circle">
-              <img src="./icons/steps/money.svg" />
-            </div>
-            <p>Excepteur sint occaecat cupidatat non proident</p>
-          </div>
-        </div>
-        <form class="order__form">
-          <fieldset class="form__personal-data">
-            <label for="name" class="visually-hidden">Name</label>
-            <input
-              type="text"
-              placeholder="Name"
-              class="input-text input__name"
-              id="name"
-            />
-            <label for="email" class="visually-hidden">Email</label>
-            <input
-              type="email"
-              placeholder="Email"
-              class="input-text input__email"
-              id="email"
-            />
-          </fieldset>
-          <label class="label__checkbox"
-            ><input
-              type="checkbox"
-              class="input__checkbox visually-hidden"
-              aria-label="Accept privacy policy"
-            /><span class="pseudo-checkbox"></span>I accept Privacy
-            policy</label
-          >
-          <button
-            type="submit"
-            class="button button__primary"
-            aria-label="Отправить форму заказа"
-          >
-            Отправить
-          </button>
-        </form>
       </section>
       <!-- /.order -->
     </main>
