@@ -235,7 +235,6 @@ ul {
 
   .order__form {
     width: 100%;
-    margin-block-end: 40px;
   }
 
   .form__personal-data {
@@ -356,88 +355,101 @@ ul {
       color: variables.$accent-color;
     }
 
-    /* Custom range */
-    .custom-range {
-      grid-column: auto;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      width: 100%;
-      height: 6px;
-      background: transparent;
-      cursor: pointer;
-    }
-
-    .custom-range::-webkit-slider-runnable-track {
-      height: 6px;
-      background-color: variables.$white-opacity-85;
-      border-radius: 3px;
-    }
-
-    .custom-range::-moz-range-track {
-      height: 6px;
-      background: variables.$white-opacity-85;
-      border-radius: 3px;
-    }
-
-    .custom-range::-moz-focus-outer {
-      border: 0;
-    }
-
-    .custom-range:focus {
-      outline: none;
-      border: none;
-      box-shadow: none;
-    }
-
-    .custom-range::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      height: 26px;
-      width: 26px;
-      background: variables.$circle-inner;
-      border-radius: 50%;
-      border: 3px solid variables.$circle-border;
-      margin-top: -10px;
-      cursor: pointer;
-    }
-
-    .custom-range::-moz-range-thumb {
-      height: 26px;
-      width: 26px;
-      background: variables.$circle-inner;
-      border-radius: 50%;
-      border: 3px solid variables.$circle-border;
-      margin-top: -10px;
-      cursor: pointer;
-    }
-  }
-
-  .submit-button {
-    grid-column: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 17.5px;
-    font-size: 15px;
-    max-height: 48px;
-  }
-
-  .form__range-wrapper {
-    grid-column: 1/3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: variables.$text-md2;
-
-    .range-description {
+    .submit-button {
+      grid-column: 2;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
+      padding: 17.5px;
+      font-size: 15px;
+      max-height: 48px;
     }
 
-    .custom-range {
-      height: 37px;
-      padding: 0;
-      border: 1px solid variables.$light-color;
+    .form__range-wrapper {
+      grid-column: 1/3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: variables.$text-md2;
+
+      .range-description {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .custom-range {
+        padding: 0;
+        border: 1px solid variables.$light-color;
+        grid-column: auto;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 100%;
+        height: 6px;
+        background: transparent;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .custom-range:focus {
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .custom-range:focus-visible {
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .custom-range::-webkit-slider-thumb:focus,
+      .custom-range::-webkit-slider-runnable-track:focus {
+        outline: none !important;
+      }
+
+      .custom-range::-webkit-slider-runnable-track {
+        height: 6px;
+        background-color: variables.$white-opacity-85;
+        border-radius: 3px;
+      }
+
+      .custom-range::-moz-range-track {
+        height: 6px;
+        background: variables.$white-opacity-85;
+        border-radius: 3px;
+      }
+
+      .custom-range::-moz-focus-outer {
+        border: 0;
+      }
+
+      .custom-range:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+      }
+
+      .custom-range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 26px;
+        width: 26px;
+        background: variables.$circle-inner;
+        border-radius: 50%;
+        border: 3px solid variables.$circle-border;
+        margin-top: -10px;
+        cursor: pointer;
+      }
+
+      .custom-range::-moz-range-thumb {
+        height: 26px;
+        width: 26px;
+        background: variables.$circle-inner;
+        border-radius: 50%;
+        border: 3px solid variables.$circle-border;
+        margin-top: -10px;
+        cursor: pointer;
+      }
     }
   }
 
@@ -712,6 +724,7 @@ ul {
 
     .submit-button {
       grid-column: 2;
+      margin-top: 20px;
     }
   }
 }
@@ -757,5 +770,9 @@ ul {
         background-repeat: repeat-x;
       }
     }
+  }
+
+  .footer__contacts-list {
+    justify-content: space-between;
   }
 }
