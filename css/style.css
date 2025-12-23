@@ -287,6 +287,8 @@ ul {
 }
 .order-inner .form__range-wrapper .custom-range {
   height: 37px;
+  padding: 0;
+  border: 1px solid rgb(255, 255, 255);
 }
 .order-inner .file-wrapper {
   position: relative;
