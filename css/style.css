@@ -15,19 +15,70 @@
   justify-content: space-between;
   align-items: center;
 }
-.header .logo {
+.header .header-inner .logo {
   text-transform: uppercase;
   font-size: 28px;
   font-weight: 800;
 }
-.header .logo:focus {
+.header .header-inner .logo:focus {
   outline: none;
 }
-.header .menu {
+.header .header-inner .menu {
   display: none;
 }
-.header .nav-toggle {
+.header .header-inner .nav-toggle {
+  position: relative;
   display: block;
+  width: 30px;
+  padding: 10px 0;
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  z-index: 100;
+  font-size: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.header .header-inner .nav-toggle__item {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: background 0.2s linear;
+}
+.header .header-inner .nav-toggle__item::before, .header .header-inner .nav-toggle__item::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  transition: transform 0.2s linear;
+}
+.header .header-inner .nav-toggle__item::before {
+  top: -10px;
+}
+.header .header-inner .nav-toggle__item::after {
+  bottom: -10px;
+}
+.header .header-inner .nav-toggle.active .nav-toggle__item {
+  background: none;
+}
+.header .header-inner .nav-toggle.active .nav-toggle__item::before {
+  transform-origin: right top;
+  transform: rotate(-45deg) translateX(0px);
+}
+.header .header-inner .nav-toggle.active .nav-toggle__item::after {
+  transform-origin: right bottom;
+  transform: rotate(45deg) translateX(1px);
 }
 
 *,
