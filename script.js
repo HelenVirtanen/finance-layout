@@ -35,4 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
   slider.addEventListener("input", () => {
     rangeValue.textContent = slider.value + "%";
   });
+
+
+  /* Open custom select */
+  const customSelect = document.querySelector('.custom-select');
+  const customSelectTrigger = document.querySelector('.custom-select__trigger');
+  customSelect.querySelector('.custom-select__trigger').onclick = (event) => {
+    event.preventDefault();
+    customSelect.classList.toggle('open');
+    customSelectTrigger.classList.toggle('open');
+  };
 });
