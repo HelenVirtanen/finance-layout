@@ -666,8 +666,7 @@ ul {
   .header {
     padding: 33px;
   }
-  .header .menu__list {
-    display: flex;
+  .header .header-inner .menu .menu__list {
     gap: 60px;
     font-size: 13px;
     text-transform: uppercase;

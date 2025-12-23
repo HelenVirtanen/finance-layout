@@ -642,11 +642,14 @@ ul {
   .header {
     padding: 33px;
 
-    .menu__list {
-      display: flex;
-      gap: 60px;
-      font-size: variables.$text-sm;
-      text-transform: uppercase;
+    .header-inner {
+      .menu {
+        .menu__list {
+          gap: 60px;
+          font-size: variables.$text-sm;
+          text-transform: uppercase;
+        }
+      }
     }
   }
 
