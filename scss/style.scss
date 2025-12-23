@@ -236,8 +236,8 @@ ul {
 
   .order__workflow {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 210px));
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 40px;
 
     .order__step {
       display: flex;
@@ -246,35 +246,10 @@ ul {
       text-align: center;
       row-gap: 20px;
       max-width: 210px;
+    }
 
-      &:not(:last-child) {
-        position: relative;
-
-        $dot-size: 6px;
-        $dot-gap: 20px;
-        $dot-count: 6;
-
-        $dot-step: $dot-size + $dot-gap;
-        $line-width: ($dot-step * $dot-count) - $dot-gap;
-
-        &::before {
-          content: "";
-          position: absolute;
-          z-index: -1;
-          top: 50px;
-          left: calc(50% + 53px);
-          height: $dot-size;
-          width: $line-width;
-
-          background-image: radial-gradient(
-            circle,
-            variables.$light-color ($dot-size / 2),
-            transparent ($dot-size / 2)
-          );
-          background-size: $dot-step $dot-size;
-          background-repeat: repeat-x;
-        }
-      }
+    .order__step::before {
+      display: none;
     }
   }
 
@@ -412,15 +387,6 @@ ul {
   gap: 40px;
   padding-top: 60px;
 
-  .order__workflow {
-    grid-template-columns: 1fr;
-    gap: 40px;
-
-    .order__step::before {
-      display: none;
-    }
-  }
-
   .form__personal-data {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -490,6 +456,36 @@ ul {
     }
     .order__workflow {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    .order__step:not(:last-child) {
+      position: relative;
+
+      $dot-size: 6px;
+      $dot-gap: 20px;
+      $dot-count: 6;
+
+      $dot-step: $dot-size + $dot-gap;
+      $line-width: ($dot-step * $dot-count) - $dot-gap;
+
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 50px;
+        left: calc(50% + 53px);
+        height: $dot-size;
+        width: $line-width;
+
+        background-image: radial-gradient(
+          circle,
+          variables.$light-color ($dot-size / 2),
+          transparent ($dot-size / 2)
+        );
+        background-size: $dot-step $dot-size;
+        background-repeat: repeat-x;
+      }
     }
 
     .form__personal-data {
@@ -568,6 +564,36 @@ ul {
   .order-inner {
     .order__workflow {
       grid-template-columns: repeat(5, 1fr);
+      gap: 30px;
+    }
+
+    .order__step:not(:last-child) {
+      position: relative;
+
+      $dot-size: 6px;
+      $dot-gap: 20px;
+      $dot-count: 6;
+
+      $dot-step: $dot-size + $dot-gap;
+      $line-width: ($dot-step * $dot-count) - $dot-gap;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 50px;
+        left: calc(50% + 34px);
+        height: $dot-size;
+        width: $line-width;
+
+        background-image: radial-gradient(
+          circle,
+          variables.$light-color ($dot-size / 2),
+          transparent ($dot-size / 2)
+        );
+        background-size: $dot-step $dot-size;
+        background-repeat: repeat-x;
+      }
     }
 
     .form__personal-data {
@@ -604,6 +630,37 @@ ul {
 
     .hero__content {
       gap: 80px;
+    }
+  }
+
+  .order-inner {
+    .order__step:not(:last-child) {
+      position: relative;
+
+      $dot-size: 6px;
+      $dot-gap: 20px;
+      $dot-count: 6;
+
+      $dot-step: $dot-size + $dot-gap;
+      $line-width: ($dot-step * $dot-count) - $dot-gap;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 50px;
+        left: calc(50% + 50px);
+        height: $dot-size;
+        width: $line-width;
+
+        background-image: radial-gradient(
+          circle,
+          variables.$light-color ($dot-size / 2),
+          transparent ($dot-size / 2)
+        );
+        background-size: $dot-step $dot-size;
+        background-repeat: repeat-x;
+      }
     }
   }
 }
