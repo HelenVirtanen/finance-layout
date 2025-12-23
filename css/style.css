@@ -241,8 +241,8 @@ ul {
   margin-block-end: 40px;
 }
 .order-inner .form__personal-data {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
   width: 100%;
   border: none;
@@ -344,10 +344,10 @@ ul {
   gap: 10px;
   align-items: center;
 }
-.footer__contacts-item .contact__link {
-  transition: color 0.2s linear;
+.footer__contacts-item .contact__link, .footer__contacts-item .payment-platform {
+  transition: color 0.2s ease-out;
 }
-.footer__contacts-item .contact__link:hover, .footer__contacts-item .contact__link:active {
+.footer__contacts-item .contact__link:hover, .footer__contacts-item .contact__link:active, .footer__contacts-item .payment-platform:hover, .footer__contacts-item .payment-platform:active {
   color: rgb(67, 171, 240);
 }
 
@@ -416,6 +416,7 @@ ul {
     background-repeat: repeat-x;
   }
   .order-inner .form__personal-data {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
   .order-inner .form__personal-data .custom-range {
