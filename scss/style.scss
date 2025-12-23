@@ -1,4 +1,5 @@
 @use "variables";
+@use "header";
 
 *,
 *::after,
@@ -68,43 +69,6 @@ ul {
   align-items: center;
 }
 
-.header {
-  position: fixed;
-  background: rgba(16, 16, 29, 0.9);
-  padding: 20px 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  max-width: 1920px;
-  max-height: 100px;
-  margin-bottom: 0;
-
-  .header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    text-transform: uppercase;
-    font-size: 28px;
-    font-weight: 800;
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  .menu {
-    display: none;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-}
-
 .hero {
   display: flex;
   align-items: center;
@@ -112,7 +76,19 @@ ul {
   padding-top: 120px;
   padding-bottom: 80px;
   height: auto;
-  background-color: variables.$light-color;
+
+  position: relative;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   .hero__content {
     inline-size: clamp(280px, 100%, 780px);
@@ -214,14 +190,15 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 80px;
-  padding-top: 120px;
+  gap: 40px;
+  padding-top: 60px;
 
   .order__title {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    text-align: center;
 
     .order__heading {
       font-size: variables.$heading-2-mobile;
@@ -260,8 +237,8 @@ ul {
 
   .form__personal-data {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 20px;
     width: 100%;
     border: none;
 
@@ -271,6 +248,7 @@ ul {
       padding: 12px 10px;
       border-radius: 3px;
       border: 1px solid variables.$light-color;
+      font-family: inherit;
       font-size: variables.$text-md2;
       background-color: variables.$white-opacity-85;
       color: variables.$form-text-color;
@@ -285,14 +263,18 @@ ul {
     }
 
     .custom-range {
-      grid-column: 1/3;
+      grid-column: auto;
     }
   }
 
   .submit-button {
     grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 17.5px;
     font-size: 15px;
+    max-height: 48px;
   }
 
   .form__range-wrapper {
@@ -363,7 +345,7 @@ ul {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 .footer__contacts-item {
@@ -381,35 +363,8 @@ ul {
   }
 }
 
-// MOBILE BASE
-/* Order section */
-.order-inner {
-  gap: 40px;
-  padding-top: 60px;
-
-  .form__personal-data {
-    grid-template-columns: 1fr;
-    gap: 20px;
-
-    .custom-range {
-      grid-column: auto;
-    }
-  }
-
-  .submit-button {
-    grid-column: auto;
-  }
-}
-
 /* === TABLET === */
 @media (min-width: 768px) {
-  body {
-    background-image: url("../images/main-background.png");
-    background-position: 70% top;
-    background-repeat: no-repeat;
-    background-size: 170%;
-  }
-
   .container {
     padding: 0 40px;
   }
@@ -441,6 +396,7 @@ ul {
       .hero__title {
         font-size: variables.$heading-1-tablet;
         text-align: left;
+        max-width: 70%;
       }
 
       .hero__buttons {
@@ -451,14 +407,23 @@ ul {
 
   .order-inner {
     padding-top: 80px;
-    .order__heading {
+    padding-bottom: 80px;
+    gap: 60px;
+
+    .order__title {
+      .order__heading {
       font-size: variables.$heading-2-desktop;
     }
+  }
     .order__workflow {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    .order__step:not(:last-child) {
+    .order__step:nth-child(3)::before {
+      display: block !important;
+    }
+
+    .order__step:not(:last-child):not(:nth-child(3)) {
       position: relative;
 
       $dot-size: 6px;
@@ -488,6 +453,7 @@ ul {
       }
     }
 
+
     .form__personal-data {
       grid-template-columns: repeat(2, 1fr);
 
@@ -501,6 +467,8 @@ ul {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
 
   .footer__contacts-item {
@@ -519,12 +487,6 @@ ul {
 
 /* === SMALL DESKTOP === */
 @media (min-width: 1024px) {
-  body {
-    background-image: url("../images/main-background.png");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: 135%;
-  }
   .header {
     padding: 33px;
 
@@ -562,6 +524,10 @@ ul {
   }
 
   .order-inner {
+    padding-top: 120px;
+    padding-bottom: 150px;
+    gap: 80px;
+
     .order__workflow {
       grid-template-columns: repeat(5, 1fr);
       gap: 30px;
@@ -598,31 +564,17 @@ ul {
 
     .form__personal-data {
       grid-template-columns: repeat(3, 1fr);
-
-      .custom-range {
-        grid-column: 1 / 3;
-      }
+      gap: 30px;
     }
 
     .submit-button {
       grid-column: 2;
     }
   }
-
-  .footer__contacts-list {
-    justify-content: space-between;
-  }
 }
 
 /* === LARGE DESKTOP === */
 @media (min-width: 1200px) {
-  body {
-    background-image: url("../images/main-background.png");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: 120%;
-  }
-
   .hero {
     padding-top: 100px;
     padding-bottom: 200px;
