@@ -387,9 +387,7 @@ ul {
   }
 
   .hero {
-    background-color: transparent;
-    margin-top: 90px;
-    padding-top: 80px;
+    padding-top: 180px;
 
     .hero__content {
       inline-size: clamp(280px, 100%, 780px);
@@ -511,11 +509,10 @@ ul {
   }
 
   .hero {
-    margin-top: 100px;
-
     .hero__content {
       .hero__title {
         font-size: variables.$heading-1-desktop;
+        max-width: 80%;
       }
 
       .hero__description {
@@ -577,7 +574,7 @@ ul {
 /* === LARGE DESKTOP === */
 @media (min-width: 1200px) {
   .hero {
-    padding-top: 100px;
+    padding-top: 200px;
     padding-bottom: 200px;
     height: 100vh;
 
