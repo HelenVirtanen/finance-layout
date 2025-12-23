@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  background: rgba(16, 16, 29, 0.9);
+  background-color: rgba(16, 16, 29, 0.9);
   padding: 20px 0;
   top: 0;
   left: 0;
@@ -25,6 +25,30 @@
 }
 .header .header-inner .menu {
   display: none;
+  width: 100%;
+  margin-top: -1px;
+  padding: 20px 20px 30px 20px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgb(39, 39, 51);
+}
+.header .header-inner .menu .menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-transform: uppercase;
+}
+.header .header-inner .menu .menu__list .menu__link {
+  font-family: inherit;
+  font-weight: 400;
+  transition: color 0.2s linear;
+}
+.header .header-inner .menu .menu__list .menu__link:hover, .header .header-inner .menu .menu__list .menu__link:active {
+  color: rgb(67, 171, 240);
+}
+.header .header-inner .menu.active {
+  display: block;
 }
 .header .header-inner .nav-toggle {
   position: relative;
@@ -34,7 +58,7 @@
   position: absolute;
   top: 35%;
   right: 5%;
-  z-index: 100;
+  z-index: 20;
   font-size: 0;
   border: 0;
   background: none;
@@ -79,6 +103,15 @@
 .header .header-inner .nav-toggle.active .nav-toggle__item::after {
   transform-origin: right bottom;
   transform: rotate(45deg) translateX(1px);
+}
+
+.header.active {
+  background-color: rgb(39, 39, 51);
+}
+
+.header.fixed .header.fixed {
+  transform: translate3d(0, 0, 0);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 *,
@@ -395,10 +428,13 @@ ul {
   gap: 10px;
   align-items: center;
 }
-.footer__contacts-item .contact__link, .footer__contacts-item .payment-platform {
+.footer__contacts-item .contact__link,
+.footer__contacts-item .payment-platform {
   transition: color 0.2s ease-out;
 }
-.footer__contacts-item .contact__link:hover, .footer__contacts-item .contact__link:active, .footer__contacts-item .payment-platform:hover, .footer__contacts-item .payment-platform:active {
+.footer__contacts-item .contact__link:hover, .footer__contacts-item .contact__link:active,
+.footer__contacts-item .payment-platform:hover,
+.footer__contacts-item .payment-platform:active {
   color: rgb(67, 171, 240);
 }
 
@@ -409,15 +445,21 @@ ul {
   }
   .header {
     padding: 30px 0;
+    background-color: rgba(16, 16, 29, 0.9);
   }
-  .header .menu {
+  .header .header-inner .menu {
     display: block;
+    position: static;
+    margin-top: 0;
+    background-color: transparent;
+    width: initial;
+    padding: 0;
   }
-  .header .menu__list {
-    display: flex;
+  .header .header-inner .menu .menu__list {
+    flex-direction: row;
     gap: 20px;
   }
-  .header .nav-toggle {
+  .header .header-inner .nav-toggle {
     display: none;
   }
   .hero {
@@ -498,14 +540,6 @@ ul {
     gap: 60px;
     font-size: 13px;
     text-transform: uppercase;
-  }
-  .header .menu__list .menu__link {
-    font-family: inherit;
-    font-weight: 400;
-    transition: color 0.2s linear;
-  }
-  .header .menu__list .menu__link:hover, .header .menu__list .menu__link:active {
-    color: rgb(67, 171, 240);
   }
   .hero .hero__content .hero__title {
     font-size: 48px;

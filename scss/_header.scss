@@ -1,6 +1,8 @@
+@use "variables";
+
 .header {
   position: fixed;
-  background: rgba(16, 16, 29, 0.9);
+  background-color: variables.$dark-bg;
   padding: 20px 0;
   top: 0;
   left: 0;
@@ -27,6 +29,35 @@
 
     .menu {
       display: none;
+      width: 100%;
+      margin-top: -1px;
+      padding: 20px 20px 30px 20px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: variables.$bg-color;
+
+      .menu__list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        text-transform: uppercase;
+
+        .menu__link {
+        font-family: inherit;
+        font-weight: 400;
+        transition: color 0.2s linear;
+
+        &:hover,
+        &:active {
+          color: variables.$accent-color;
+        }
+      }
+      }
+    }
+
+    .menu.active {
+      display: block;
     }
 
     .nav-toggle {
@@ -37,7 +68,7 @@
       position: absolute;
       top: 35%;
       right: 5%;
-      z-index: 100;
+      z-index: 20;
       font-size: 0;
       border: 0;
       background: none;
@@ -79,17 +110,30 @@
     }
 
     .nav-toggle.active .nav-toggle__item {
-        background: none;
-      }
-      
-      .nav-toggle.active .nav-toggle__item::before {
-        transform-origin: right top;
-        transform: rotate(-45deg) translateX(0px);
-      }
+      background: none;
+    }
 
-      .nav-toggle.active .nav-toggle__item::after {
-        transform-origin: right bottom;
-        transform: rotate(45deg) translateX(1px);
-      }
+    .nav-toggle.active .nav-toggle__item::before {
+      transform-origin: right top;
+      transform: rotate(-45deg) translateX(0px);
+    }
+
+    .nav-toggle.active .nav-toggle__item::after {
+      transform-origin: right bottom;
+      transform: rotate(45deg) translateX(1px);
+    }
   }
 }
+
+.header.active {
+  background-color: variables.$bg-color;
+}
+
+.header.fixed {
+  .header.fixed {
+  transform: translate3d(0, 0, 0);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+}
+
+

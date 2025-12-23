@@ -353,7 +353,8 @@ ul {
   gap: 10px;
   align-items: center;
 
-  .contact__link, .payment-platform {
+  .contact__link,
+  .payment-platform {
     transition: color 0.2s ease-out;
 
     &:hover,
@@ -371,18 +372,26 @@ ul {
 
   .header {
     padding: 30px 0;
+    background-color: variables.$dark-bg;
 
-    .menu {
-      display: block;
-    }
+    .header-inner {
+      .menu {
+        display: block;
+        position: static;
+        margin-top: 0;
+        background-color: transparent;
+        width: initial;
+        padding: 0;
 
-    .menu__list {
-      display: flex;
-      gap: 20px;
-    }
-
-    .nav-toggle {
-      display: none;
+        .menu__list {
+          flex-direction: row;
+          gap: 20px;
+        }
+      }
+      
+      .nav-toggle {
+        display: none;
+      }
     }
   }
 
@@ -410,9 +419,9 @@ ul {
 
     .order__title {
       .order__heading {
-      font-size: variables.$heading-2-desktop;
+        font-size: variables.$heading-2-desktop;
+      }
     }
-  }
     .order__workflow {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -450,7 +459,6 @@ ul {
         background-repeat: repeat-x;
       }
     }
-
 
     .form__personal-data {
       display: grid;
@@ -494,17 +502,6 @@ ul {
       gap: 60px;
       font-size: variables.$text-sm;
       text-transform: uppercase;
-
-      .menu__link {
-        font-family: inherit;
-        font-weight: 400;
-        transition: color 0.2s linear;
-
-        &:hover,
-        &:active {
-          color: variables.$accent-color;
-        }
-      }
     }
   }
 
