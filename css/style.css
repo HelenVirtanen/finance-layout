@@ -375,7 +375,7 @@ ul {
     background-image: url("../images/main-background.png");
     background-position: 70% top;
     background-repeat: no-repeat;
-    background-size: 200%;
+    background-size: 170%;
   }
   .container {
     padding: 0 40px;
@@ -444,7 +444,7 @@ ul {
     background-image: url("../images/main-background.png");
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 150%;
+    background-size: 135%;
   }
   .header {
     padding: 33px;
