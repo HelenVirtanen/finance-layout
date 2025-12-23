@@ -263,6 +263,7 @@ ul {
       border-color: variables.$accent-color;
     }
 
+    /* Custom select */
     select {
       opacity: 0;
       pointer-events: none;
@@ -355,8 +356,59 @@ ul {
       color: variables.$accent-color;
     }
 
+    /* Custom range */
     .custom-range {
       grid-column: auto;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 100%;
+      height: 6px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .custom-range::-webkit-slider-runnable-track {
+      height: 6px;
+      background-color: variables.$white-opacity-85;
+      border-radius: 3px;
+    }
+
+    .custom-range::-moz-range-track {
+      height: 6px;
+      background: variables.$white-opacity-85;
+      border-radius: 3px;
+    }
+
+    .custom-range::-moz-focus-outer {
+      border: 0;
+    }
+
+    .custom-range:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+
+    .custom-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 26px;
+      width: 26px;
+      background: variables.$circle-inner;
+      border-radius: 50%;
+      border: 3px solid variables.$circle-border;
+      margin-top: -10px;
+      cursor: pointer;
+    }
+
+    .custom-range::-moz-range-thumb {
+      height: 26px;
+      width: 26px;
+      background: variables.$circle-inner;
+      border-radius: 50%;
+      border: 3px solid variables.$circle-border;
+      margin-top: -10px;
+      cursor: pointer;
     }
   }
 
