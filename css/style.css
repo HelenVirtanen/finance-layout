@@ -329,24 +329,15 @@ ul {
 
 .footer__contacts-list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 38px;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .footer__contacts-item {
   display: flex;
   gap: 10px;
   align-items: center;
-}
-.footer__contacts-item:first-child::after, .footer__contacts-item:nth-child(4)::after {
-  content: "";
-  display: inline-block;
-  width: 1px;
-  height: 18px;
-  background-color: rgb(196, 196, 196);
-  margin-left: 38px;
-  vertical-align: middle;
 }
 .footer__contacts-item .contact__link {
   transition: color 0.2s linear;
@@ -355,7 +346,6 @@ ul {
   color: rgb(67, 171, 240);
 }
 
-/* === MOBILE FIRST BASE === */
 /* Order section */
 .order-inner {
   gap: 40px;
@@ -377,16 +367,6 @@ ul {
 }
 .order-inner .submit-button {
   grid-column: auto;
-}
-
-/* Footer */
-.footer__contacts-list {
-  flex-direction: column;
-  gap: 20px;
-}
-.footer__contacts-list .footer__contacts-item:first-child::after,
-.footer__contacts-list .footer__contacts-item:nth-child(4)::after {
-  display: none;
 }
 
 /* === TABLET === */
@@ -445,7 +425,17 @@ ul {
   }
   .footer__contacts-list {
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+  .footer__contacts-item:first-child::after, .footer__contacts-item:nth-child(4)::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 18px;
+    background-color: rgb(196, 196, 196);
+    margin-left: 20px;
+    vertical-align: middle;
   }
 }
 /* === SMALL DESKTOP === */
@@ -493,6 +483,9 @@ ul {
   }
   .order-inner .submit-button {
     grid-column: 2;
+  }
+  .footer__contacts-list {
+    justify-content: space-between;
   }
 }
 /* === LARGE DESKTOP === */
