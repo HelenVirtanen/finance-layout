@@ -36,13 +36,29 @@ document.addEventListener("DOMContentLoaded", () => {
     rangeValue.textContent = slider.value + "%";
   });
 
-
   /* Open custom select */
-  const customSelect = document.querySelector('.custom-select');
-  const customSelectTrigger = document.querySelector('.custom-select__trigger');
-  customSelect.querySelector('.custom-select__trigger').onclick = (event) => {
+  const customSelect = document.querySelector(".custom-select");
+  const customSelectTrigger = document.querySelector(".custom-select__trigger");
+  const items = customSelect.querySelectorAll(".custom-select__item");
+  const selectText = customSelect.querySelector(".custom-select__text");
+  const realSelect = customSelect.querySelector("select");
+
+  customSelectTrigger.onclick = (event) => {
     event.preventDefault();
-    customSelect.classList.toggle('open');
-    customSelectTrigger.classList.toggle('open');
+    customSelect.classList.toggle("open");
+    customSelectTrigger.classList.toggle("open");
   };
+
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      const value = item.getAttribute("data-value");
+      const text = item.textContent;
+
+      selectText.textContent = text;
+      realSelect.value = value;
+
+      customSelect.classList.remove("open");
+      customSelectTrigger.classList.remove("open");
+    });
+  });
 });
