@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* Nav menu toggle */
   document.addEventListener("click", (event) => {
-    const target = event.target.closest("#nav_toggle");
+    const target = event.target.closest("#burger");
     if (!target) return;
 
     event.preventDefault();

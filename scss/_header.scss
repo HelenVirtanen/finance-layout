@@ -10,118 +10,119 @@
   z-index: 10;
   max-height: 100px;
   margin-bottom: 0;
+}
 
-  .header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
 
-    .logo {
-      text-transform: uppercase;
-      font-size: 28px;
-      font-weight: 800;
+.logo {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 800;
 
-      &:focus {
-        outline: none;
-      }
-    }
-
-    .menu {
-      display: none;
-      width: 100%;
-      margin-top: -1px;
-      padding: 20px 20px 30px 20px;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: variables.$bg-color;
-
-      .menu__list {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        text-transform: uppercase;
-
-        .menu__link {
-        font-family: inherit;
-        font-weight: 400;
-        transition: color 0.2s linear;
-
-        &:hover,
-        &:active {
-          color: variables.$accent-color;
-        }
-      }
-      }
-    }
-
-    .menu.active {
-      display: block;
-    }
-
-    .nav-toggle {
-      position: relative;
-      display: block;
-      width: 30px;
-      padding: 10px 0;
-      position: absolute;
-      top: 35%;
-      right: 5%;
-      z-index: 20;
-      font-size: 0;
-      border: 0;
-      background: none;
-      cursor: pointer;
-
-      &__item {
-        display: block;
-        width: 100%;
-        height: 2px;
-        background-color: #fff;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        transition: background 0.2s linear;
-      }
-
-      &__item::before,
-      &__item::after {
-        content: "";
-        width: 100%;
-        height: 2px;
-        background-color: #fff;
-        position: absolute;
-        left: 0;
-        z-index: 1;
-        transition: transform 0.2s linear;
-      }
-
-      &__item::before {
-        top: -10px;
-      }
-
-      &__item::after {
-        bottom: -10px;
-      }
-    }
-
-    .nav-toggle.active .nav-toggle__item {
-      background: none;
-    }
-
-    .nav-toggle.active .nav-toggle__item::before {
-      transform-origin: right top;
-      transform: rotate(-45deg) translateX(0px);
-    }
-
-    .nav-toggle.active .nav-toggle__item::after {
-      transform-origin: right bottom;
-      transform: rotate(45deg) translateX(1px);
-    }
+  &:focus {
+    outline: none;
   }
+}
+
+.menu {
+  display: none;
+  width: 100%;
+  margin-top: -1px;
+  padding: 20px 20px 30px 20px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: variables.$bg-color;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-transform: uppercase;
+}
+
+.menu__link {
+  font-family: inherit;
+  font-weight: 400;
+  transition: color 0.2s linear;
+
+  &:hover,
+  &:active {
+    color: variables.$accent-color;
+  }
+}
+
+.menu.active {
+  display: block;
+}
+
+.burger {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 10px 0;
+  top: 0;
+  right: 5%;
+  z-index: 20;
+  font-size: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.burger__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: background 0.2s linear;
+}
+
+.burger__line::before,
+.burger__line::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  transition: transform 0.2s linear;
+}
+
+.burger__line::before {
+  top: -10px;
+}
+
+.burger__line::after {
+  bottom: -10px;
+}
+
+.burger.active .burger__line {
+  background: none;
+}
+
+.burger.active .burger__line::before {
+  transform-origin: right top;
+  transform: rotate(-45deg) translateX(0px);
+}
+
+.burger.active .burger__line::after {
+  transform-origin: right bottom;
+  transform: rotate(45deg) translateX(1px);
 }
 
 .header.active {
@@ -129,10 +130,6 @@
 }
 
 .header.fixed {
-  .header.fixed {
-  transform: translate3d(0, 0, 0);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
-}
-
-
