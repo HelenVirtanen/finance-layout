@@ -129,6 +129,68 @@
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  height: auto;
+  position: relative;
+}
+
+.hero__background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__content {
+  inline-size: clamp(280px, 100%, 780px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: rgb(0, 0, 0);
+}
+
+.hero__title {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hero__description {
+  font-size: 18px;
+}
+
+.hero__description-intro {
+  font-weight: 600;
+  margin-block-end: 10px;
+}
+
+.hero-list {
+  list-style-type: none;
+}
+
+.hero-list__item {
+  margin-block-end: 5px;
+}
+.hero-list__item::before {
+  content: "-";
+  color: rgb(0, 0, 0);
+  margin: 0 10px;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 15px;
+}
+
 .order {
   background-image: url("../images/order-background.webp");
   background-position: center;
@@ -521,60 +583,6 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 120px;
-  padding-bottom: 80px;
-  height: auto;
-  position: relative;
-}
-.hero__background {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.hero .hero__content {
-  inline-size: clamp(280px, 100%, 780px);
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  color: rgb(0, 0, 0);
-}
-.hero .hero__content .hero__title {
-  font-size: 32px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-}
-.hero .hero__content .hero__description {
-  font-size: 18px;
-}
-.hero .hero__content .hero__description .hero__description-intro {
-  font-weight: 600;
-  margin-block-end: 10px;
-}
-.hero .hero__content .hero__description .hero-list {
-  list-style-type: none;
-}
-.hero .hero__content .hero__description .hero-list__item {
-  margin-block-end: 5px;
-}
-.hero .hero__content .hero__description .hero-list__item::before {
-  content: "-";
-  color: rgb(0, 0, 0);
-  margin: 0 10px;
-}
-.hero .hero__content .hero__buttons {
-  display: flex;
-  gap: 15px;
 }
 
 .button {
