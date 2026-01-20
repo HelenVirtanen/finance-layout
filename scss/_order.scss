@@ -1,0 +1,312 @@
+@use "variables";
+
+.order {
+  background-image: url("../images/order-background.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.order-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.order__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.order__heading {
+  font-size: variables.$heading-2-mobile;
+  text-transform: uppercase;
+}
+
+.order__accent {
+  font-size: variables.$text-md2;
+  color: variables.$gray-lightest;
+}
+
+.order__workflow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.order__step {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 20px;
+  max-width: 210px;
+}
+
+.order__step::before {
+  display: none;
+}
+
+.order__form {
+  width: 100%;
+}
+
+.form__personal-data {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  border: none;
+}
+
+input,
+.file-label {
+  padding: 12px 10px;
+  border-radius: 3px;
+  border: 1px solid variables.$light-color;
+  font-family: inherit;
+  font-size: variables.$text-md2;
+  background-color: variables.$white-opacity-85;
+  color: variables.$form-text-color;
+  width: 100%;
+  height: 48px;
+}
+
+input:focus {
+  outline: none;
+  border-color: variables.$accent-color;
+}
+
+/* Custom select */
+select {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.custom-select {
+  position: relative;
+  padding: 12px 10px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-size: variables.$text-md2;
+  color: variables.$form-text-color;
+  width: 102%;
+  margin-left: -2px;
+  height: 48px;
+}
+
+.custom-select__trigger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  padding: 12px 10px;
+  background-color: variables.$white-opacity-85;
+  border: 1px solid variables.$light-color;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: variables.$text-md2;
+  text-align: left;
+  color: variables.$bg-color;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.custom-select__trigger.open {
+  color: variables.$light-color;
+  background-color: variables.$gray-medium;
+  border-radius: 3px 3px 0 0;
+  border: 1px solid variables.$gray-medium;
+}
+
+.custom-select__arrow {
+  position: absolute;
+  right: 10px;
+  top: 30%;
+  width: 20px;
+  height: 20px;
+  background: url("../icons/form/arrow-dark.svg") no-repeat center;
+  transition: transform 0.2s ease;
+}
+
+.custom-select.open .custom-select__list {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.custom-select.open .custom-select__arrow {
+  background: url("../icons/form/arrow-light.svg") no-repeat center;
+}
+
+.custom-select__list {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 100%;
+  background: variables.$bg-color;
+  border: 1px solid variables.$gray-medium;
+  border-radius: 0 0 3px 3px;
+  padding: 6px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.custom-select__item {
+  padding: 10px;
+  cursor: pointer;
+  color: variables.$light-color;
+}
+
+.custom-select__item:hover {
+  color: variables.$accent-color;
+}
+
+.submit-button {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 17.5px;
+  font-size: 15px;
+  max-height: 48px;
+}
+
+.form__range-wrapper {
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: variables.$text-md2;
+
+  .range-description {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .custom-range {
+    padding: 0;
+    border: 1px solid variables.$light-color;
+    grid-column: auto;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .custom-range:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .custom-range:focus-visible {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .custom-range::-webkit-slider-thumb:focus,
+  .custom-range::-webkit-slider-runnable-track:focus {
+    outline: none !important;
+  }
+
+  .custom-range::-webkit-slider-runnable-track {
+    height: 6px;
+    background-color: variables.$white-opacity-85;
+    border-radius: 3px;
+  }
+
+  .custom-range::-moz-range-track {
+    height: 6px;
+    background: variables.$white-opacity-85;
+    border-radius: 3px;
+  }
+
+  .custom-range::-moz-focus-outer {
+    border: 0;
+  }
+
+  .custom-range:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  .custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 26px;
+    width: 26px;
+    background: variables.$circle-inner;
+    border-radius: 50%;
+    border: 3px solid variables.$circle-border;
+    margin-top: -10px;
+    cursor: pointer;
+  }
+
+  .custom-range::-moz-range-thumb {
+    height: 26px;
+    width: 26px;
+    background: variables.$circle-inner;
+    border-radius: 50%;
+    border: 3px solid variables.$circle-border;
+    margin-top: -10px;
+    cursor: pointer;
+  }
+}
+
+.file-wrapper {
+  position: relative;
+}
+
+.file-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-color: variables.$accent-color;
+  cursor: pointer;
+  font-size: variables.$text-md2;
+  color: variables.$form-text-color;
+  width: 100%;
+  max-width: 370px;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.file-label:hover {
+  border-color: variables.$light-color;
+  color: variables.$white-opacity-85;
+  background-color: variables.$blue-dark;
+  box-shadow:
+    inset 1px 1px 10px variables.$gray-lighter,
+    inset -1px -1px 10px variables.$gray-lighter;
+}
+
+.file-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  transition: filter 0.3s ease;
+}
+
+.file-label:hover .file-icon {
+  filter: brightness(0) invert(1);
+}
