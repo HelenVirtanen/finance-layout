@@ -1,5 +1,6 @@
 @use "variables";
 @use "header";
+@use "footer";
 
 *,
 *::after,
@@ -489,36 +490,6 @@ ul {
 
   .file-label:hover .file-icon {
     filter: brightness(0) invert(1);
-  }
-}
-
-.footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: variables.$gray-medium;
-  font-size: variables.$text-sm;
-}
-
-.footer__contacts-list {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.footer__contacts-item {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-
-  .contact__link,
-  .payment-platform {
-    transition: color 0.2s ease-out;
-
-    &:hover,
-    &:active {
-      color: variables.$accent-color;
-    }
   }
 }
 
