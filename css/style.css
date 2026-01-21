@@ -175,11 +175,11 @@
 
 .hero-list {
   list-style-type: none;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
 }
 
-.hero-list__item {
-  margin-block-end: 5px;
-}
 .hero-list__item::before {
   content: "-";
   color: rgb(0, 0, 0);
@@ -600,9 +600,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 32px;
-  width: 183px;
-  height: 43px;
+  padding: 15px 60px;
   font-size: 13px;
 }
 

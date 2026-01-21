@@ -47,11 +47,12 @@
 
 .hero-list {
   list-style-type: none;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
 }
 
 .hero-list__item {
-  margin-block-end: 5px;
-
   &::before {
     content: "-";
     color: variables.$dark-color;
