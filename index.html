@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -63,12 +63,10 @@
     <main>
       <!-- Hero -->
       <section class="hero" id="about">
-        <img
-          src="./images/main-background.webp"
-          alt=""
-          fetchpriority="high"
-          class="hero__background"
-        />
+        <picture class="hero__background">
+          <source srcset="./images/main-background.webp" type="image/webp" />
+          <img src="./images/main-background.png" alt="" fetchpriority="high" />
+        </picture>
         <div class="container">
           <div class="hero__content">
             <h1 class="hero__title">
@@ -164,18 +162,30 @@
                   <span class="custom-select__arrow"></span>
                 </button>
                 <ul class="custom-select__list">
-                  <li class="custom-select__item" data-value="1">Sed ut perspiciatis</li>
-                  <li class="custom-select__item" data-value="2">Nemo enim ipsam</li>
-                  <li class="custom-select__item" data-value="3">Et harum quidem</li>
-                  <li class="custom-select__item" data-value="4">Temporibus autem</li>
-                  <li class="custom-select__item" data-value="5">Itaque earum rerum</li>
+                  <li class="custom-select__item" data-value="1">
+                    Sed ut perspiciatis
+                  </li>
+                  <li class="custom-select__item" data-value="2">
+                    Nemo enim ipsam
+                  </li>
+                  <li class="custom-select__item" data-value="3">
+                    Et harum quidem
+                  </li>
+                  <li class="custom-select__item" data-value="4">
+                    Temporibus autem
+                  </li>
+                  <li class="custom-select__item" data-value="5">
+                    Itaque earum rerum
+                  </li>
                 </ul>
 
                 <label for="select" class="visually-hidden"
                   >Выберите тип системы:</label
                 >
                 <select id="select" name="select">
-                  <option value="" disabled selected>Выберите тип системы:</option>
+                  <option value="" disabled selected>
+                    Выберите тип системы:
+                  </option>
                   <option value="1">Sed ut perspiciatis</option>
                   <option value="2">Nemo enim ipsam</option>
                   <option value="3">Et harum quidem</option>

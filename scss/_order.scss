@@ -1,7 +1,11 @@
 @use "variables";
 
 .order {
-  background-image: url("../images/order-background.webp");
+  background-image: url("../images/order-background.png");
+  background-image: image-set(
+    url("../images/order-background.webp") type("image/webp"),
+    url("../images/order-background.png") type("image/png")
+  );
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
