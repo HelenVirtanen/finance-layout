@@ -536,6 +536,7 @@ body {
   font-family: "Lato", sans-serif;
   color: rgb(255, 255, 255);
   background-color: rgb(39, 39, 51);
+  min-width: 320px;
 }
 
 h1,
@@ -569,7 +570,9 @@ ul {
 }
 
 .container {
-  inline-size: clamp(320px, 100%, 1200px);
+  min-width: 320px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }

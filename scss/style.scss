@@ -19,6 +19,9 @@ body {
   font-family: "Lato", sans-serif;
   color: variables.$light-color;
   background-color: variables.$bg-color;
+  min-width: 320px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 h1,
@@ -52,7 +55,9 @@ ul {
 }
 
 .container {
-  inline-size: clamp(320px, 100%, 1200px);
+  min-width: 320px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
